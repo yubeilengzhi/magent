@@ -1,0 +1,32 @@
+# 依赖
+node_modules/
+dist/
+*.tgz
+
+# 本地源码（太大，不上传）
+sources/
+extracted/
+analysis/
+
+# 编辑器
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# 系统
+.DS_Store
+Thumbs.db
+
+# 日志
+*.log
+npm-debug.log*
+
+# 环境变量
+.env
+.env.local
+.env.*.local
+
+# Token
+*.token
+gh-token
