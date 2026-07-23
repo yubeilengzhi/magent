@@ -20,9 +20,16 @@
 
 ## 1. 愿景与差异化
 
-### 1.1 一句话定位
+### 1.1 一句话定位（2026 修订版）
 
-> **magent = 1 个 CLI 入口 + 智能路由 + 跨工具记忆（mem0）+ 共享配置层（ECC/superpowers 模型）+ Web UI（可选）**
+> **magent = 1 个 CLI 入口 + 智能路由 + engram 持久化记忆 + 共享 skills 层（superpowers-zh）+ Web UI（可选）**
+
+**核心差异化**（在 2026 年的 16+ 类似项目中）：
+- 别人做"单一 agent"（claude-squad、AionUi、cc-connect）
+- 别人做"单一功能"（engram 是记忆、superpowers 是 skills）
+- **magent 做"统一 CLI + 智能路由"，让用户 1 个命令跨 16+ agent**
+
+参考 2026 项目调研（详见 `COMPETITIVE_ANALYSIS_2026.md`）：
 
 ### 1.2 核心问题（用户真实痛点）
 
@@ -47,6 +54,23 @@
 | Web UI | ✅ | ❌ | ❌ | ⚠️ Kanban | ❌ | ✅ **可选** |
 | Provider 数量 | 4 | 9+ | 9+ | 1 | 1 | ✅ **4 起步，按需加** |
 | 安装方式 | npm install | 插件市场 | 插件市场 | npm install | npm install | **npm install + 适配器** |
+
+### 1.3.1 与 2026 年最新项目的差异化（2026 年 7 月）
+
+| 我们的能力 | engram | claude-squad | AionUi | cc-connect | superpowers-zh |
+|----------|--------|--------------|--------|-----------|----------------|
+| 统一 CLI 入口 | ❌ | ✅（Go TUI） | ✅（Electron） | ❌ | ❌ |
+| 智能路由 | ❌ | ❌ | ❌ | ❌ | ❌ |
+| 跨工具记忆 | ✅（自做） | ❌ | ⚠️（弱） | ❌ | ❌ |
+| 16+ agent 集成 | ❌ | ✅（4 个） | ✅（20+） | ✅（16） | ✅（20 harness） |
+| 共享 skills | ❌ | ❌ | ⚠️（21 个） | ❌ | ✅（20 skills） |
+| 桌面/移动 | ❌ | ❌ | ✅ | ❌ | ❌ |
+| messaging 桥接 | ❌ | ❌ | ✅ | ✅ | ❌ |
+
+**结论**：
+- ✅ **没有人同时做"统一 CLI + 智能路由 + 跨工具记忆"**
+- ✅ **我们的"智能路由"是真正的差异化**（不是基于规则，是基于 LLM）
+- ✅ **我们集成 engram + superpowers-zh，不重复造轮子**
 
 ### 1.4 价值主张
 
